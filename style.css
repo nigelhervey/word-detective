@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+body{
+		font-family: 'Nunito', Arial, sans-serif;	/* Font to use */
+		background-color:#B7C5D1; text-align:center;
+	}
+	#footer{
+		height:30px;
+		vertical-align:middle;
+		text-align:right;
+		clear:both;
+		padding-right:3px;
+		background-color:#D9B9A7;
+		margin-top:2px;
+		width:790px;
+	}
+	#footer form{
+		margin:0px;
+		margin-top:2px;
+	}
+	#dhtmlgoodies_dragDropContainer{	/* Main container for this script */
+		width:790px;
+		height:350px;
+		border:6px solid #D9B9A7;
+		border-radius:24px;
+		box-sizing:border-box;
+		outline:1px solid #F7F3ED;
+		outline-offset:-11px;
+		background-color:#F7F3ED;
+		-moz-user-select:none;
+	}
+	#dhtmlgoodies_dragDropContainer ul{	/* General rules for all <ul> */
+		margin-top:0px;
+		margin-left:0px;
+		margin-bottom:0px;
+		padding:2px;
+	}
+	
+	#dhtmlgoodies_dragDropContainer li,#dragContent li,li#indicateDestination{	/* Movable items, i.e. <LI> */
+		list-style-type:none;
+		height:15px;
+		background-color:#B5A79B;
+		border:1px solid #000;
+		padding:2px;
+		margin-bottom:2px;
+		cursor:pointer;
+		font-size:13px;
+		line-height:15px;
+		border-radius:6px;
+	}
+
+	li#indicateDestination{	/* Box indicating where content will be dropped - i.e. the one you use if you don't use arrow */
+		border:1px dotted #600;	
+		background-color:#F7F3ED;
+	}
+		
+	#dhtmlgoodies_dragDropContainer ul li.correctAnswer{	/* Correctly moved item */
+		background-color:green;
+		color:#303A42;
+	}
+	#dhtmlgoodies_dragDropContainer ul li.wrongAnswer{	/* Item moved to wrong box */
+		background-color:red;
+		color:#303A42;
+	}
+	
+	
+	/* LEFT COLUMN CSS */
+	div#dhtmlgoodies_listOfItems{	/* Left column "Available students" */
+		
+		float:left;
+		padding-left:10px;
+		padding-right:10px;
+		
+		/* CSS HACK */
+		width: 180px;	/* IE 5.x */
+		width/* */:/**/160px;	/* Other browsers */
+		width: /**/160px;
+				
+	}
+	#dhtmlgoodies_listOfItems ul{	/* Left(Sources) column <ul> */
+		height:280px;	
+
+	}
+		
+	div#dhtmlgoodies_listOfItems div{
+		border:1px solid #999;
+		border-radius:12px;		
+	}
+	div#dhtmlgoodies_listOfItems div ul{	/* Left column <ul> */
+		margin-left:0px;	/* Space at the left of list - the arrow will be positioned there */
+	}
+	#dhtmlgoodies_listOfItems div p{	/* Heading above left column */
+		margin:0px;	
+		font-weight:bold;
+		padding-left:0px;
+		background-color:#D9B9A7;	
+		color:#303A42;
+		margin-bottom:5px;
+		text-align:center;
+		border-radius:8px;
+	}
+	/* END LEFT COLUMN CSS */
+	
+	#dhtmlgoodies_dragDropContainer .mouseover{	/* Mouse over effect DIV box in right column */
+		background-color:#E2EBED;
+		border:1px solid #D9B9A7;
+	}
+	
+	/* Start main container CSS */
+	
+	div#dhtmlgoodies_mainContainer {
+    width:590px;
+    float:left;
+    padding-left:20px;
+    box-sizing:border-box;
+}
+	#dhtmlgoodies_mainContainer div{	/* Parent <div> of small boxes */
+		float:left;
+		margin-right:10px;
+		margin-bottom:10px;
+		margin-top:0px;
+		border:1px solid #999;
+		border-radius:12px;
+
+		/* CSS HACK */
+		width: 172px;	/* IE 5.x */
+		width/* */:/**/170px;	/* Other browsers */
+		width: /**/170px;
+				
+	}
+	#dhtmlgoodies_mainContainer div ul{
+		margin-left:10px;
+	}
+	
+	#dhtmlgoodies_mainContainer div p{	/* Heading above small boxes */
+		margin:0px;
+		padding:0px;
+		padding-left:0px;
+		font-weight:bold;
+		background-color:#D9B9A7;	
+		color:#303A42;	
+		margin-bottom:5px;
+		text-align:center;
+		border-radius:8px;
+	}
+	
+	#dhtmlgoodies_mainContainer ul{	/* Small box in right column ,i.e <ul> */
+		width:152px;
+		height:80px;	
+		border:0px;	
+		margin-bottom:0px;
+		overflow:hidden;
+		
+	}
+	
+	#dragContent{	/* Drag container */
+		position:absolute;
+		width:150px;
+		height:15px;
+		display:none;
+		margin:0px;
+		padding:0px;
+		z-index:2000;
+	}
+
+	#dragDropIndicator{	/* DIV for the small arrow */
+		position:absolute;
+		width:7px;
+		height:10px;
+		display:none;
+		z-index:1000;
+		margin:0px;
+		padding:0px;
+	}
+	.style1 {color: #FF0000}
+#dhtmlgoodies_dragDropContainer {
+    display: inline-block;
+    text-align: left;
+}
+.illustrated-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.illustrated-header .header-art {
+    width: 180px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.illustrated-header h1 {
+    margin: 0;
+}
+#dhtmlgoodies_mainContainer #instructionScreen {
+    clear: both;
+    float: none;
+    width: 525px;
+    height: 175px;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#instructionScreen h2 {
+    font-size: 20px;
+    margin: 5px 0 10px;
+    color: #303A42;
+}
+
+#dhtmlgoodies_mainContainer #instructionScreen p {
+    background: none;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 0;
+    margin: 8px 0;
+    text-align: center;
+    color: #303A42;
+}
+
+#instructionScreen button {
+    background-color: #D9B9A7;
+    color: #303A42;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Fireworks celebration */
+
+#dhtmlgoodies_mainContainer #fireworks {
+    position: relative;
+    height: 0;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    float: none;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.firework {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #D9B9A7;
+    animation: fireworkBurst 1.2s ease-out forwards;
+}
+
+@keyframes fireworkBurst {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .firework {
+        animation: none;
+        opacity: 0;
+    }
+}
+/* Word Detective watercolor-inspired title */
+
+.illustrated-header .painted-title {
+    font-family: 'Finger Paint', cursive;
+    font-weight: normal;
+    font-size: 38px;
+    -webkit-text-stroke: 0.4px;
+}
+
+.painted-title .paint-blue {
+    color: #547F9C;
+}
+
+.painted-title .paint-peach {
+    color: #BD8570;
+}
+
+.painted-title .paint-green {
+    color: #789B85;
+}
+
+.painted-title .paint-lavender {
+    color: #A38AB2;
+}
+
+.painted-title .paint-space {
+    display: inline-block;
+    width: 0.3em;
+}
+	
